@@ -1,0 +1,6 @@
+My intent here is create a FPGA implementation of a Data General Nova (1200).  I expect it will be  a test driven design using the DG diagnostics to drive the design.  I am going to start out with a flat structure and tehn evolve it to a structure similar to the PDP8e project.
+
+The intended target is a BeMicro Max10 evaluation board.  However I will start with pure verilog and use the iverilog simulator to prove the code.
+
+I expect I will be able to use (with modifications ) code from the PDP8e project.
+
