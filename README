@@ -3,4 +3,10 @@ My intent here is create a FPGA implementation of a Data General Nova (1200).  I
 The intended target is a BeMicro Max10 evaluation board.  However I will start with pure verilog and use the iverilog simulator to prove the code.
 
 I expect I will be able to use (with modifications ) code from the PDP8e project.
+I can't find momentary switched=s that are cheap enough for me to use in this project.  The nova 1200 has two parts to the front panel, the upper part with LEDs and data switches.  The a small ( 1 U?) panel containing the momentary swithecs.  I may substitue two spst pcb mount push buttons (cheap and I have some)
+
+The base goal here is the nova 1200/800 instruction set, but I may include the stack manipulation instructions of the nova 3.  A stretch gaol is to implement the multiply and divide in the fpga - basically microcode the interation of the kernel of these two operations 
+
+I do not intend to impleement memory mapping function, but I I did one could use the SRAM on the Be-micro eval board
+
 

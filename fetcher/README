@@ -1,0 +1,10 @@
+ I had thought that I should have one module for fetching instructions and a second one for defered memory access.  But both need access to the ram so they should be merged.
+
+ So this module assess ram.  It contains the pc an address mux that takes the pc and an effective address.  It contains logic to do the incrementing/ decrementing of the auto index locations.  It contains logic to do the INC /DCR instructiosn of memory.
+ It contains logic to do chained indirect address calcuations as well as placing limits on the number of indirections.
+
+ It contains logic to do subroutine calls (return address in AC3)
+
+ it might contain stack operations
+
+ 

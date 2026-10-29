@@ -1,0 +1,11 @@
+certain input signals do not need to debounced:
+
+reset (Mreset) and stop.  these operate when the machine is running and required no conditioning.  
+
+AC0(1,2,3) examing.  pressing these shows the the ac in the data display, it only shows as long as we hold the button. These are processed by D_mux.
+
+D_mux display AC0(1,w,3) and the data bus (output of memory) as well as decoding the state of the machine and presenting displays of fetch defer and execute as well as run
+
+
+
+
