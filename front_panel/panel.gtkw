@@ -1,0 +1,22 @@
+[*]
+[*] GTKWave Analyzer v3.3.125 (w)1999-2025 BSI
+[*] Mon Nov  2 03:18:22 2026
+[*]
+[dumpfile] "/home/armstrong/Desktop/nova/front_panel/front.vcd"
+[dumpfile_mtime] "Mon Nov  2 03:16:48 2026"
+[dumpfile_size] 8217
+[savefile] "/home/armstrong/Desktop/nova/front_panel/temp.gtkw"
+[timestart] 0
+[size] 1681 812
+[pos] -1 -1
+*-17.289637 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] nova_tb.
+[treeopen] nova_tb.UUT.
+[sst_width] 263
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 232
+@28
+nova_tb.UUT.clock
+[pattern_trace] 1
+[pattern_trace] 0

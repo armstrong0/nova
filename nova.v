@@ -4,7 +4,7 @@
 // data display - LED to 3.3 volt pin goes to ground to turn it on - a one
 `include "../front_panel/front_panel.v"
 `include "../front_panel/D_mux.v"
-`include "../timing/Clock.v"
+`include "../timing/MClock.v"
 `include "../alc/alc.v"
 
 
@@ -40,7 +40,6 @@ module nova (
     output ion
 );
 
-  wire clk;
   wire fp_trigger;
   wire oneKHz;
   wire sd_reset;
@@ -49,9 +48,9 @@ module nova (
   wire [ 9:0] cntr;
   wire [15:0] baud_count;
 
-  Clock CLK (
+  MClock CLK (
       .reset(reset),
-      .clk(clk),
+      .clk(clock),
       .fp_trigger(fp_trigger),
       .oneKHz(oneKHz),
       .sd_reset(sd_reset),
@@ -66,7 +65,7 @@ module nova (
 
   alc ALC (
       .reset(reset),
-      .clk(clk),
+      .clk(clock),
       .cSwitch(cSwitch),
       .AC0_depd(AC0_depd),
       .AC1_depd(AC1_depd),
@@ -78,8 +77,10 @@ module nova (
       .AC3(AC3)
   );
   front_panel FP (
-      .clk(clk),
+      .clk(clock),
       .reset(reset),
+      .fp_cont (fp_cont),
+      .fp_trigger (fp_trigger),
       .AC0_dep(AC0_dep),
       .AC1_dep(AC1_dep),
       .AC2_dep(AC2_dep),
@@ -104,7 +105,7 @@ module nova (
 
   D_mux DM (
       .reset(reset),
-      .clk(clk),
+      .clk(clock),
       .AC0_exam(AC0_exam),
       .AC1_exam(AC1_exam),
       .AC2_exam(AC2_exam),

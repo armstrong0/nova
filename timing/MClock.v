@@ -1,4 +1,4 @@
-module Clock (
+module MClock (
     input reset,
     input clk,
     input fp_trigger,
